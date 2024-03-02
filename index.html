@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .welcome h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 0;
+            background: linear-gradient(to right, #07121a, #c10578);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: -200% 0%, 0% 50%;
+            }
+            50% {
+                background-position: 200% 0%, 100% 50%;
+            }
+            100% {
+                background-position: -200% 0%, 0% 50%;
+            }
+        }
+
+        header {
+            background-color: #061f2b;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+        }
+
+        header h1 {
+            padding-left: 15px;
+        }
+
+        header img {
+            width: 50px;
+        }
+
+        nav {
+            display: flex;
+            padding: 10px;
+            border-radius: 5px;
+            padding-right: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        footer {
+            background-color: #0f0f0f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .left-content h1 {
+            max-width: 550px;
+            line-height: 50px;
+        }
+
+        .left-content p {
+            line-height: 31px;
+        }
+
+        .left-content {
+            width: 51%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .left-content:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .left-content ul li {
+            line-height: 30px;
+            color: blue;
+            padding-right: 30px;
+        }
+
+        .right-content {
+            width: 41%;
+        }
+
+        .video {
+            width: 100%;
+            height: 279px;
+            margin-top: 60px;
+            border-radius: 30px;
+        }
+
+        .niche h1 {
+            margin-bottom: 20px;
+            font-size: 39px;
+            max-width: 80%;
+            line-height: 1.3;
+        }
+
+        .niche p {
+            line-height: 30px;
+        }
+
+        #registrationFormContainer {
+            display: none;
+
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        
+        #registrationFormContainer input {
+            margin-bottom: 10px;
+            padding: 8px;
+
+            box-sizing: border-box;
+        }
+
+        .getStaeted button {
+            background-color: #061f2b;
+            color: #f2f2f2;
+            width: 132px;
+            height: 40px;
+
+        }
+
+        .footer1 {
+
+            background-color: #0f0f0f;
+            color: white;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+    </style>
+    <title>TradeFare 360</title>
+</head>
+
+<body>
+    <header>
+        <h1>TradeFair 360</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="welcome">
+        <h1>Experience the Future of Trade Fairs in the Virtual Realm</h1>
+    </div>
+
+    <main>
+        <div class="content">
+            <div class="left-content">
+                <h1>Every Click Unfolds a New Chapter <span style="color: orangered;">All-In-One Event Management
+                        Platform</span></h1>
+                <p>Planning a conference, tradeshow, internal event or job fair? vFairs provides all you need to delight
+                    your virtual & in-person attendees.</p>
+
+                <ul>
+                    <li>Run conferences, summits, open days & more</li>
+                    <li>Get custom mobile apps & onsite solutions</li>
+                    <li>Host immersive virtual events</li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <div class="video">
+                    <video width="100%" height="279" controls>
+                        <source src="Event-Management-Platform-Demo-New.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="niche">
+            <center>
+                <h1>One-stop Shop Event Management Software to Power All Your Event Needs</h1>
+                <p>Whether you’re hosting events online, onsite or both, vFairs offers a customizable event platform and
+                    tech solutions to make your events epic.</p>
+            </center>
+        </div>
+
+        <center>
+            <div class="getStaeted">
+                <button id="getStartedButton">Get Started</button>
+            </div>
+
+            
+            <div id="registrationFormContainer" style="display: none;">
+                <h2 style="color: blue;">Registration Form</h2>
+                <!-- Add your form fields and submit button here -->
+                <form id="registrationForm">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+            </div>
+        </center>
+    </main>
+
+    <div class="footer1">
+        <center>
+            <p>@TradeFair 360</p>
+        </center>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function toggleRegistrationForm() {
+                var registrationFormContainer = document.getElementById("registrationFormContainer");
+                registrationFormContainer.style.display = (registrationFormContainer.style.display === "none" || registrationFormContainer.style.display === "") ? "block" : "none";
+            }
+
+            var getStartedButton = document.getElementById("getStartedButton");
+            if (getStartedButton) {
+                getStartedButton.addEventListener("click", toggleRegistrationForm);
+            }
+        });
+
+        function submitForm() {
+           
+            window.location.href = "DasBoard.html";
+        }
+    </script>
+</body>
+
+</html>
